@@ -1,0 +1,31 @@
+{% extends "layer.html"%}
+{% block content %}
+<div>
+
+   <h3>{{msg}}</h3>
+
+      <table border = 1 id="customers">
+         <thead>
+            <td>ID</td>
+            <td>NAME</td>
+            <td>PASSWORD</td>
+
+         </thead>
+
+         {% for row in rows %}
+            <tr>
+               <td>{{row[0]}}</td>
+               <td>{{row[1]}}</td>
+               <td> {{ row[2]}}</td>
+
+
+
+            </tr>
+         {% endfor %}
+      </table>
+
+      <a href="/admin">Go back to admin page</a>
+      <a href = "/">Go back to home page</a>
+
+</div>
+{% endblock%}

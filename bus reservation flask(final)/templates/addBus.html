@@ -1,0 +1,12 @@
+{% extends "layer.html"%}
+{% block content %}
+<form class="" action="/addrec" method="post">
+    name <input type="text" name="nm" value=""> <br>
+    source<input type="text" name="src" value=""><br>
+    destination<input type="text" name="dst" value=""><br>
+    time<input type="text" name="t" value=""><br>
+    price<input type="text" name="p" value=""><br>
+    number of seats<input type="text" name="nos" value=""><br>
+    <button type="submit" name="button">submit</button>
+</form>
+{%endblock%}

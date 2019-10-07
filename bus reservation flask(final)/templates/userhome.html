@@ -1,0 +1,19 @@
+{% extends "layer.html"%}
+{% block content %}
+<div>
+<div>
+<ul>
+  <li><a href="/logout">Log out</a></li>
+  <li><a class="active" href="/">Home</a></li>
+  <li><a href="/">About</a></li>
+
+</ul>
+<h2> Logged in as  {{user}}  </h2>
+<br>
+<form>
+<input type="button" value="Book" onclick="window.location.href='/book.html'" />
+<input type="button" value="Cancel" onclick="window.location.href='/cancel.html'" />
+<input type="button" value="View all bookings" onclick="window.location.href='/userbookinglist.html'" />
+</form>
+</div>
+{%endblock%}

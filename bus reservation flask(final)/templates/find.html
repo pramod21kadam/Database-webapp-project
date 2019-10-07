@@ -1,0 +1,13 @@
+{% extends "layer.html"%}
+{% block content %}
+      <form action = "{{ url_for('findbus') }}" method = "POST">
+         <h3>BOOKING FORM</h3>
+<br>
+<div>
+          source<br>
+         <input type="text" name = "src" autocomplete="on" /><br>
+         destination<br>
+         <input type = "text" name = "dest" autocomplete="on" /><br>
+         <input type = "submit" value = "submit" /><br>
+      </form></div>
+{%endblock%}

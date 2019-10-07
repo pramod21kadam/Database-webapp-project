@@ -1,0 +1,52 @@
+{% extends "layer.html"%}
+{% block content %}
+<div>
+<form method="POST" action="{{ url_for('booking') }}"
+   <h3>{{msg}}</h3>
+
+      <table border = 1 id="customers">
+         <thead>
+            <td>ID</td>
+            <td>NAME</td>
+            <td>SOURCE</td>
+            <td>DESTINATION</td>
+            <td>TIME</td>
+            <td>PRICE</td>
+<td>NUM OF SEATS</td>
+<td>NUM OF SEATS REM</td>
+
+         </thead>
+
+         {% for row in rows %}
+            <tr>
+               <td>{{row[0]}}</td>
+               <td>{{row[1]}}</td>
+               <td> {{ row[2]}}</td>
+               <td>{{row[3]}}</td>
+	<td>{{row[4]}}</td>
+	<td>{{row[5]}}</td>
+<td>{{row[6]}}</td>
+<td>{{row[7]}}</td>
+
+
+            </tr>
+         {% endfor %}
+      </table>
+{% if user!='admin'   %}
+enter id to book: <br>
+<input type="number" name="id" autocomplete="off">
+<br>
+enter number of passengers <br>
+<input type="number" name="nop" autocomplete="off">
+<br>
+<input type="submit" value="book">
+{% endif %}
+{% if user!='admin'   %}
+      <a href="/user">Go back to home page</a>
+{% else %}
+<a href="/user">Go back to home page</a>
+{% endif %}
+
+     </form>
+</div>
+{%endblock%}

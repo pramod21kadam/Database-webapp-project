@@ -1,0 +1,11 @@
+{% extends "layer.html"%}
+{% block content %}
+   <div>
+       <h2>{{ msg }}</h2>
+{% if user!='admin' %}
+      <a href = "/user">go back to home page</a>
+{% else %}
+ <a href = "/admin.html">go back to home page</a>
+{% endif %}
+
+{% endblock %}
